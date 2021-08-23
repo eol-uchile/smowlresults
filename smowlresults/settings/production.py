@@ -1,0 +1,5 @@
+def plugin_settings(settings):
+    settings.SMOWLRESULT_EDXUSERSACTIVITIESV2_URL = settings.ENV_TOKENS.get('SMOWLRESULT_EDXUSERSACTIVITIESV2_URL', '')
+    settings.SMOWL_KEY = settings.ENV_TOKENS.get('SMOWL_KEY', '')
+    settings.SMOWLRESULT_RESULTSCONTROLLER_URL = settings.ENV_TOKENS.get('SMOWLRESULT_RESULTSCONTROLLER_URL', '')
+    settings.SMOWL_ENTITY = settings.ENV_TOKENS.get('SMOWL_ENTITY', '')

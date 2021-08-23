@@ -1,0 +1,9 @@
+
+
+.smowlresults_block .count {
+    font-weight: bold;
+}
+
+.smowlresults_block p {
+    cursor: pointer;
+}
