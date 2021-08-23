@@ -1,1 +1,1 @@
-from .smowlresults import IframeWithAnonymousIDXBlock
+from .smowlresults import SmowlResultsXblock

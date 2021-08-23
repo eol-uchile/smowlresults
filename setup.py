@@ -32,7 +32,7 @@ setup(
     ],
     entry_points={
         'xblock.v1': [
-            'smowlresults = smowlresults:IframeWithAnonymousIDXBlock',
+            'smowlresults = smowlresults:SmowlResultsXblock',
         ],
         "lms.djangoapp": [
             "smowlresults = smowlresults.apps:SmowlResultsConfig",

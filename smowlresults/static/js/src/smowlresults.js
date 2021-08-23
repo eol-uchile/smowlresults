@@ -1,5 +1,5 @@
 /* Javascript for SMOWLRESULTS*/
-function IframeWithAnonymousIDXBlock(runtime, element, settings) {
+function SmowlResultsXblock(runtime, element, settings) {
     $(function ($) {
         if (settings.has_settings){
             var nombre = settings.nomExamenes;
