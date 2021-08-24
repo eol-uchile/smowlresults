@@ -28,41 +28,40 @@ function SmowlResultsXblock(runtime, element, settings) {
                     opt.text =  nombrePunto[1];
                     select.appendChild(opt);
                 }
-
-                function seleccionar(sel)
-                {
-                    var val = sel.options[sel.selectedIndex].value;
-                    var txt3 = sel.options[sel.selectedIndex].text;
-                    var txt2 = txt3.split(" ").join("_");
-
-                    if(val !="Empty" )
-                    {
-                        $(element).find('input[name="idCourse"]')[0].value = val;
-                        $(element).find('input[name="course_MoodleName"]')[0].value = txt2;
-                        //document.getElementsByName("idCourse")[0].value = val;
-                        //document.getElementsByName("course_MoodleName")[0].value = txt2;
-                        //var ifra = document.getElementById("smowl");
-                        var ifra = $(element).find('#smowl')[0];
-                        ifra.style.minHeight = '500px';
-                        ifra.style.height = 'auto';
-                        //ifra.height = "3374";
-                        ifra.width = "105%";
-
-                        //var resultsForm2 = document.getElementById("resultsForm");
-                        var resultsForm2 = $(element).find('#resultsForm')[0];
-                        resultsForm2.style.display = "inline";
-                        resultsForm2.submit();
-                    }
-                    else
-                    {
-                        var ifra = $(element).find('#smowl')[0];
-                        ifra.style.minHeight = '0';
-                        ifra.style.height = '0';
-                        //ifra.height = "0";
-                        ifra.width = "0";
-                    }
-                }
             }
+        }
+    });
+    $(element).find('#listaEx').live('change', function() {
+        var sel = $(this)[0];
+        var val = sel.options[sel.selectedIndex].value;
+        var txt3 = sel.options[sel.selectedIndex].text;
+        var txt2 = txt3.split(" ").join("_");
+
+        if(val !="Empty" )
+        {
+            $(element).find('input[name="idCourse"]')[0].value = val;
+            $(element).find('input[name="course_MoodleName"]')[0].value = txt2;
+            //document.getElementsByName("idCourse")[0].value = val;
+            //document.getElementsByName("course_MoodleName")[0].value = txt2;
+            //var ifra = document.getElementById("smowl");
+            var ifra = $(element).find('#smowl')[0];
+            ifra.style.minHeight = '500px';
+            ifra.style.height = 'auto';
+            //ifra.height = "3374";
+            ifra.width = "105%";
+
+            //var resultsForm2 = document.getElementById("resultsForm");
+            var resultsForm2 = $(element).find('#resultsForm')[0];
+            resultsForm2.style.display = "inline";
+            resultsForm2.submit();
+        }
+        else
+        {
+            var ifra = $(element).find('#smowl')[0];
+            ifra.style.minHeight = '0';
+            ifra.style.height = '0';
+            //ifra.height = "0";
+            ifra.width = "0";
         }
     });
 }
